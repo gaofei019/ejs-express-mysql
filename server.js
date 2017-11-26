@@ -18,9 +18,10 @@ server.listen(8080);
 
 //解析请求数据
 
-server.use(bodyParser({
+／*server.use(bodyParser({
     extended:false
-}));
+}));*／
+server.use(bodyParser.urlencoded({extended:false}));
 server.use(multerObj.any());
 
 //设置cookie，session
